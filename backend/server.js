@@ -14,7 +14,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // --- CONFIGURATION ---
 // REPLACE WITH YOUR GMAIL DETAILS
 const EMAIL_USER = 'mfcfinancesales@gmail.com'; 
-const EMAIL_PASS = 'fwts fphe zdot jmwd'; 
+const EMAIL_PASS = 'fwtsfphezdotjmwd'; 
 
 // Configure the Email Transporter
 const transporter = nodemailer.createTransport({
@@ -36,7 +36,7 @@ app.post('/send-email', (req, res) => {
 
     // Email Content
     const mailOptions = {
-        from: EMAIL_USER,
+        from: {name},
         to: 'mfcfinancesales@gmail.com', // Where you want to receive the leads
         subject: `📢 NEW MFC AUCTION ENQUIRY: ${name}`,
         html: `
