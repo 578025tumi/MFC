@@ -545,81 +545,44 @@
     </a>
 
     <!-- Bootstrap JS -->
-  <script>// 4. Send the data to YOUR OWN BACKEND
-        // Change the URL to your local server
-        fetch("http://localhost:3000/send-email", { 
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(Object.fromEntries(formData)) // Convert data to JSON
-        })
-        .then(response => response.json())
-        .then(data => {
-            if(data.status === 'success') {
-                // SUCCESS: Show Green Message
-                feedbackBox.innerHTML = `
-                    <div class="alert alert-success border-start border-5 border-success">
-                        <strong><i class="fas fa-check-circle"></i> Sent Successfully!</strong><br>
-                        Our Finance Manager will contact you shortly.
-                    </div>
-                `;
-                form.reset();
-                submitBtn.innerHTML = 'Request Call Back';
-                submitBtn.disabled = false;
-            } else {
-                throw new Error('Server returned error');
-            }
-        })
-        .catch(error => {
-            // FAILED
+<script>
+    // Send the data to your backend
+    fetch("http://localhost:3000/send-email", { 
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(Object.fromEntries(formData))
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.status === 'success') {
+            // SUCCESS: Show Green Message
             feedbackBox.innerHTML = `
-                <div class="alert alert-danger border-start border-5 border-danger">
-                    <strong><i class="fas fa-times-circle"></i> Failed to Send.</strong><br>
-                    Please check if the backend server is running.
+                <div class="alert alert-success border-start border-5 border-success">
+                    <strong><i class="fas fa-check-circle"></i> Sent Successfully!</strong><br>
+                    Our Finance Manager will contact you shortly.
                 </div>
             `;
+            form.reset();
             submitBtn.innerHTML = 'Request Call Back';
             submitBtn.disabled = false;
-        });
-        // 4. Send the data to YOUR OWN BACKEND
-        // Change the URL to your local server
-        fetch("http://localhost:3000/send-email", { 
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(Object.fromEntries(formData)) // Convert data to JSON
-        })
-        .then(response => response.json())
-        .then(data => {
-            if(data.status === 'success') {
-                // SUCCESS: Show Green Message
-                feedbackBox.innerHTML = `
-                    <div class="alert alert-success border-start border-5 border-success">
-                        <strong><i class="fas fa-check-circle"></i> Sent Successfully!</strong><br>
-                        Our Finance Manager will contact you shortly.
-                    </div>
-                `;
-                form.reset();
-                submitBtn.innerHTML = 'Request Call Back';
-                submitBtn.disabled = false;
-            } else {
-                throw new Error('Server returned error');
-            }
-        })
-        .catch(error => {
-            // FAILED
-            feedbackBox.innerHTML = `
-                <div class="alert alert-danger border-start border-5 border-danger">
-                    <strong><i class="fas fa-times-circle"></i> Failed to Send.</strong><br>
-                    Please check if the backend server is running.
-                </div>
-            `;
-            submitBtn.innerHTML = 'Request Call Back';
-            submitBtn.disabled = false;
-        });
-        
-        </script>
+        } else {
+            throw new Error('Server returned error');
+        }
+    })
+    .catch(error => {
+        // FAILED
+        feedbackBox.innerHTML = `
+            <div class="alert alert-danger border-start border-5 border-danger">
+                <strong><i class="fas fa-times-circle"></i> Failed to Send.</strong><br>
+                Please check if the backend server is running.
+            </div>
+        `;
+        submitBtn.innerHTML = 'Request Call Back';
+        submitBtn.disabled = false;
+    });
+</script>
+
 </body>
 </html>
