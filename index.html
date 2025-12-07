@@ -176,9 +176,9 @@
             <div class="row align-items-center">
                 <div class="col-md-6 mb-4 mb-md-0">
                     <!-- Picture of Sales Reps -->
-                    <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&q=80" alt="MFC Sales Team" class="sales-rep-img shadow">
-                </div>
-                <div class="col-md-6">
+                     <img src="C:\Users\Stilo\Desktop\MFC\team images\team1.jpg"alt="MFC Sales Team" class="sales-rep-img shadow">
+                    <img src="C:\Users\Stilo\Desktop\MFC\team images\team2.jpg" alt="MFC Sales Team" class="sales-rep-img shadow">
+                      <img src="C:\Users\Stilo\Desktop\MFC\team images\team3.jpg" alt="MFC Sales Team" class="sales-rep-img shadow">
                     <h2 class="text-success fw-bold">Meet Our Sales Team</h2>
                     <p>Our dedicated finance managers are here to guide you through the auction process. As a division of Nedbank, we ensure transparency and security.</p>
                     <div class="alert alert-warning border-start border-4 border-warning">
@@ -195,57 +195,201 @@
             <h2 class="text-center fw-bold mb-5">Top Auction Vehicles (South Africa)</h2>
             <div class="row g-4">
                 
-                <!-- Car 1: Hilux -->
-                 <!-- <div class="col-md-6 col-lg-3">  -->
-                    <!-- <div class="card car-card h-100"> -->
-                        <!-- <img src="https://unsplash.com/photos/a-row-of-white-trucks-parked-in-a-parking-lot-c2kxNwDcPZo" class="card-img-top" alt="Toyota Hilux" style="height: 200px; object-fit: cover;"> -->
-                        <!-- <div class="card-body"> -->
-                            <!-- <span class="location-badge">Johannesburg</span> -->
-                            <!-- <h5 class="card-title mt-2">2023 Toyota Hilux 2.8 GD-6</h5> -->
-                            <!-- <p class="price-tag">R 589,000</p> -->
-                            <!-- <p class="card-text small text-muted">45,000km • Automatic • Diesel</p> -->
-                            <!-- <a href="#contact" class="btn btn-outline-success w-100">Enquire Now</a> -->
-                        <!-- </div> -->
-                    <!-- </div> -->
-                <!-- </div>  -->
-
-                <!-- Car 2: Polo -->
+                <!-- Car 1: Toyota Hilux (Gallery) -->
                 <div class="col-md-6 col-lg-3">
                     <div class="card car-card h-100">
-                        <img src="https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?auto=format&fit=crop&q=80" class="card-img-top" alt="VW Polo" style="height: 200px; object-fit: cover;">
+                        <!-- Carousel Start -->
+                        <div id="carouselHilux" class="carousel slide" data-bs-interval="false">
+                            <div class="carousel-inner">
+                                <!-- Image 1: Front -->
+                                <div class="carousel-item active">
+                                    <img src="C:\Users\Stilo\Desktop\MFC\team images\gd6.jpg" class="d-block w-100" style="height: 200px; object-fit: cover;">
+                                </div>
+                                <!-- Image 2: Side/Action -->
+                                <div class="carousel-item">
+                                    <img src="C:\Users\Stilo\Desktop\MFC\team images\gd62.jpg" class="d-block w-100" style="height: 200px; object-fit: cover;">
+                                </div>
+                                <!-- Image 3: Interior -->
+                                <div class="carousel-item">
+                                    <img src="C:\Users\Stilo\Desktop\MFC\team images\gd63.jpg" class="d-block w-100" style="height: 200px; object-fit: cover;">
+                                </div>
+                            </div>
+                            <!-- Controls -->
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselHilux" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselHilux" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            </button>
+                        </div>
+                        <!-- Carousel End -->
+
+                        <div class="card-body">
+                            <span class="location-badge">Johannesburg</span>
+                            <h5 class="card-title mt-2">2023 Toyota Hilux 2.8 GD-6</h5>
+                            <p class="price-tag">R 589,000</p>
+                            <p class="card-text small text-muted">45,000km • Automatic • Diesel</p>
+                            <a href="#contact" class="btn btn-outline-success w-100">Enquire Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Car 2: VW Polo (Gallery) -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="card car-card h-100">
+                        <!-- Carousel Start -->
+                        <div id="carouselPolo" class="carousel slide" data-bs-interval="false">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="C:\Users\Stilo\Desktop\MFC\team images\busfront.jpg" class="d-block w-100" style="height: 200px; object-fit: cover;">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="C:\Users\Stilo\Desktop\MFC\team images\busside.jpg" class="d-block w-100" style="height: 200px; object-fit: cover;">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="C:\Users\Stilo\Desktop\MFC\team images\businside.jpg" class="d-block w-100" style="height: 200px; object-fit: cover;">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselPolo" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon"></span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselPolo" data-bs-slide="next">
+                                <span class="carousel-control-next-icon"></span>
+                            </button>
+                        </div>
+                        <!-- Carousel End -->
+
                         <div class="card-body">
                             <span class="location-badge">Cape Town</span>
-                            <h5 class="card-title mt-2">2022 VW Polo Vivo 1.4</h5>
-                            <p class="price-tag">R 185,000</p>
-                            <p class="card-text small text-muted">32,000km • Manual • Petrol</p>
+                            <h5 class="card-title mt-2">2022 Toyata quatum</h5>
+                            <p class="price-tag">R129 999</p>
+                            <p class="card-text small text-muted">88 407km• Manual • Petrol</p>
+                            <p class="card-text small text-muted">FULL SERVICE HISTORY AVAILABLE, accident </p>
                             <a href="#contact" class="btn btn-outline-success w-100">Enquire Now</a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Car 3: Ranger -->
+                <!-- Car 3: polo 2022 -->
                 <div class="col-md-6 col-lg-3">
                     <div class="card car-card h-100">
-                        <img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&q=80" class="card-img-top" alt="Ford Ranger" style="height: 200px; object-fit: cover;">
+                         <!-- Carousel Start -->
+                         <div id="carouselRanger" class="carousel slide" data-bs-interval="false">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="" class="d-block w-100" style="height: 200px; object-fit: cover;">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="C:\Users\Stilo\Desktop\MFC\team images\polo8.jpg" class="d-block w-100" style="height: 200px; object-fit: cover;">
+                                </div>
+                                  <div class="carousel-item">
+                                    <img src="C:\Users\Stilo\Desktop\MFC\team images\poloside.jpg" class="d-block w-100" style="height: 200px; object-fit: cover;">
+                                </div>
+                                 <div class="carousel-item">
+                                    <img src="C:\Users\Stilo\Desktop\MFC\team images\poloinside.jpg" class="d-block w-100" style="height: 200px; object-fit: cover;">
+                                </div>
+                                 <div class="carousel-item">
+                                    <img src="C:\Users\Stilo\Desktop\MFC\team images\polosteering.jpg" class="d-block w-100" style="height: 200px; object-fit: cover;">
+                                </div>
+
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselRanger" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon"></span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselRanger" data-bs-slide="next">
+                                <span class="carousel-control-next-icon"></span>
+                            </button>
+                        </div>
+                        <!-- Carousel End -->
+
                         <div class="card-body">
                             <span class="location-badge">Durban</span>
-                            <h5 class="card-title mt-2">2023 Ford Ranger Wildtrak</h5>
-                            <p class="price-tag">R 620,000</p>
-                            <p class="card-text small text-muted">15,000km • Auto • Diesel</p>
+                            <h5 class="card-title mt-2">2020 Volkswagen Polo GTI </h5>
+                            <p class="price-tag">R102 000</p>
+                            <p class="card-text small text-muted">77,000km • Auto • Petrol</p>
+                            <span class="location-badge">ONLINE ONLY ()</span>
                             <a href="#contact" class="btn btn-outline-success w-100">Enquire Now</a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Car 4: Swift -->
+                <!-- Car 4: Suzuki Swift (Gallery) -->
                 <div class="col-md-6 col-lg-3">
                     <div class="card car-card h-100">
-                        <img src="https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&q=80" class="card-img-top" alt="Suzuki Swift" style="height: 200px; object-fit: cover;">
+                        <!-- Carousel Start -->
+                        <div id="carouselSwift" class="carousel slide" data-bs-interval="false">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="C:\Users\Stilo\Desktop\MFC\team images\scarfront.jpg" class="d-block w-100" style="height: 200px; object-fit: cover;">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="C:\Users\Stilo\Desktop\MFC\team images\starinside.jpg" class="d-block w-100" style="height: 200px; object-fit: cover;">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="C:\Users\Stilo\Desktop\MFC\team images\starside.jpg" class="d-block w-100" style="height: 200px; object-fit: cover;">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselSwift" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon"></span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselSwift" data-bs-slide="next">
+                                <span class="carousel-control-next-icon"></span>
+                            </button>
+                        </div>
+                        <!-- Carousel End -->
+
                         <div class="card-body">
                             <span class="location-badge">Bloemfontein</span>
-                            <h5 class="card-title mt-2">BMW 420i</h5>
-                            <p class="price-tag">R 169,000</p>
-                            <p class="card-text small text-muted">28,000km • Manual • Petrol</p>
+                            <h5 class="card-title mt-2">2022 Toyota Corolla 1.8 XS</h5>
+                            <p class="price-tag">R65 000</p>
+                            <p class="card-text small text-muted">58,000km • Auto • Petrol</p>
+                            <span class="DEKRA">DEKRA tested</span>
+                            <a href="#contact" class="btn btn-outline-success w-100">Enquire Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                      <!-- Car 1: Toyota Hilux (Gallery) -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="card car-card h-100">
+                        <!-- Carousel Start -->
+                        <div id="carouselHilux" class="carousel slide" data-bs-interval="false">
+                            <div class="carousel-inner">
+                                <!-- Image 1: Front -->
+                                <div class="carousel-item active">
+                                    <img src="C:\Users\Stilo\Desktop\MFC\team images\tigfron.jpg" class="d-block w-100" style="height: 200px; object-fit: cover;">
+                                </div>
+                                <!-- Image 2: Side/Action -->
+                                <div class="carousel-item">
+                                    <img src="C:\Users\Stilo\Desktop\MFC\team images\tigside.jpg" class="d-block w-100" style="height: 200px; object-fit: cover;">
+                                </div>
+                                <!-- Image 3: Interior -->
+                                <div class="carousel-item">
+                                    <img src="C:\Users\Stilo\Desktop\MFC\team images\tiginterior.jpg" class="d-block w-100" style="height: 200px; object-fit: cover;">
+                                </div>
+                                 <div class="carousel-item">
+                                    <img src="C:\Users\Stilo\Desktop\MFC\team images\tigspeed.jpg" class="d-block w-100" style="height: 200px; object-fit: cover;">
+                                </div>
+                                 <div class="carousel-item">
+                                    <img src="C:\Users\Stilo\Desktop\MFC\team images\tigsun.jpg" class="d-block w-100" style="height: 200px; object-fit: cover;">
+                                </div>
+
+                            </div>
+                            <!-- Controls -->
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselHilux" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselHilux" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            </button>
+                        </div>
+                        <!-- Carousel End -->
+
+                        <div class="card-body">
+                            <span class="location-badge">Johannesburg</span>
+                            <h5 class="card-title mt-2">Tiguan R-line DSG</h5>
+                            <p class="price-tag">R 589,000</p>
+                            <p class="card-text small text-muted">45,000km • Automatic • petrol</p>
                             <a href="#contact" class="btn btn-outline-success w-100">Enquire Now</a>
                         </div>
                     </div>
@@ -340,25 +484,43 @@
                 <div class="col-md-6">
                     <h3>Vehicle Enquiries</h3>
                     <p>Ready to get your Buyers Code? Fill in the form.</p>
-                    <form>
-                        <div class="mb-3">
-                            <label class="form-label">Name & Surname</label>
-                            <input type="text" class="form-control" placeholder="Enter your name">
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label">Phone Number</label>
-                            <input type="tel" class="form-control" placeholder="082 123 4567">
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label">Enquiry Type</label>
-                            <select class="form-select">
-                                <option>Registration (Get Buyers Code)</option>
-                                <option>Vehicle Specific Enquiry</option>
-                                <option>Finance Application</option>
-                            </select>
-                        </div>
-                        <button type="submit" class="btn btn-success btn-lg w-100">Request Call Back</button>
-                    </form>
+                <!-- REPLACEMENT FORM CODE -->
+                        <!-- UPDATED CONTACT FORM -->
+<form action="https://formsubmit.co/mfcfinancesales@gmail.com" method="POST">
+    
+    <!-- Email Settings -->
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_subject" value="New MFC Auction Registration/Enquiry">
+    <input type="hidden" name="_template" value="table">
+    <!-- Optional: Auto-reply to customer -->
+    <!-- <input type="hidden" name="_autoresponse" value="Thank you for your enquiry. An MFC consultant will contact you shortly."> -->
+
+    <!-- Name Field -->
+    <div class="mb-3">
+        <label class="form-label">Name & Surname</label>
+        <input type="text" name="name" class="form-control" placeholder="Enter your full name" required>
+    </div>
+
+    <!-- Phone Field -->
+    <div class="mb-3">
+        <label class="form-label">Phone Number</label>
+        <input type="tel" name="phone" class="form-control" placeholder="082 123 4567" required>
+    </div>
+
+    <!-- Enquiry Type -->
+    <div class="mb-3">
+        <label class="form-label">Enquiry Type</label>
+        <select name="enquiry_type" class="form-select">
+            <option value="Registration">Registration (Need Buyers Code)</option>
+            <option value="Vehicle Enquiry">Vehicle Specific Enquiry</option>
+            <option value="Finance">Finance Application</option>
+        </select>
+    </div>
+
+    <!-- Submit Button -->
+    <button type="submit" class="btn btn-success btn-lg w-100">Request Call Back</button>
+
+</form>
                 </div>
                 <div class="col-md-6 mt-4 mt-md-0 d-flex flex-column justify-content-center align-items-center text-center">
                     <h4 class="text-warning">Need Immediate Assistance?</h4>
@@ -383,6 +545,81 @@
     </a>
 
     <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>// 4. Send the data to YOUR OWN BACKEND
+        // Change the URL to your local server
+        fetch("http://localhost:3000/send-email", { 
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(Object.fromEntries(formData)) // Convert data to JSON
+        })
+        .then(response => response.json())
+        .then(data => {
+            if(data.status === 'success') {
+                // SUCCESS: Show Green Message
+                feedbackBox.innerHTML = `
+                    <div class="alert alert-success border-start border-5 border-success">
+                        <strong><i class="fas fa-check-circle"></i> Sent Successfully!</strong><br>
+                        Our Finance Manager will contact you shortly.
+                    </div>
+                `;
+                form.reset();
+                submitBtn.innerHTML = 'Request Call Back';
+                submitBtn.disabled = false;
+            } else {
+                throw new Error('Server returned error');
+            }
+        })
+        .catch(error => {
+            // FAILED
+            feedbackBox.innerHTML = `
+                <div class="alert alert-danger border-start border-5 border-danger">
+                    <strong><i class="fas fa-times-circle"></i> Failed to Send.</strong><br>
+                    Please check if the backend server is running.
+                </div>
+            `;
+            submitBtn.innerHTML = 'Request Call Back';
+            submitBtn.disabled = false;
+        });
+        // 4. Send the data to YOUR OWN BACKEND
+        // Change the URL to your local server
+        fetch("http://localhost:3000/send-email", { 
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(Object.fromEntries(formData)) // Convert data to JSON
+        })
+        .then(response => response.json())
+        .then(data => {
+            if(data.status === 'success') {
+                // SUCCESS: Show Green Message
+                feedbackBox.innerHTML = `
+                    <div class="alert alert-success border-start border-5 border-success">
+                        <strong><i class="fas fa-check-circle"></i> Sent Successfully!</strong><br>
+                        Our Finance Manager will contact you shortly.
+                    </div>
+                `;
+                form.reset();
+                submitBtn.innerHTML = 'Request Call Back';
+                submitBtn.disabled = false;
+            } else {
+                throw new Error('Server returned error');
+            }
+        })
+        .catch(error => {
+            // FAILED
+            feedbackBox.innerHTML = `
+                <div class="alert alert-danger border-start border-5 border-danger">
+                    <strong><i class="fas fa-times-circle"></i> Failed to Send.</strong><br>
+                    Please check if the backend server is running.
+                </div>
+            `;
+            submitBtn.innerHTML = 'Request Call Back';
+            submitBtn.disabled = false;
+        });
+        
+        </script>
 </body>
 </html>
