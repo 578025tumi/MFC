@@ -13,8 +13,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // --- CONFIGURATION ---
 // REPLACE WITH YOUR GMAIL DETAILS
-const EMAIL_USER = 'mfcfinancesales@gmail.com'; 
-const EMAIL_PASS = 'fwts fphe zdot jmwd'; 
+const EMAIL_USER = 'Tumelorakabe@gmail.com'; 
+const EMAIL_PASS = 'fypk rods fmsa bmtu'; 
 
 // Configure the Email Transporter
 const transporter = nodemailer.createTransport({
