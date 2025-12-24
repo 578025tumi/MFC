@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalogue Page 2 | MFC Auction</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        :root { --mfc-green: #006341; --dark-green: #003E29; --alert-red: #D32F2F; --gold: #C69214; }
+        body { background-color: #f8f9fa; font-family: 'Segoe UI', sans-serif; }
+        
+        /* Same Styles as Page 1 */
+        .strict-banner { background-color: var(--alert-red); color: white; text-align: center; padding: 10px; font-weight: bold; }
+        .navbar { border-bottom: 5px solid var(--mfc-green); background: white; }
+        .navbar-brand { color: var(--mfc-green); font-weight: 800; }
+        .filter-btn { border: 2px solid var(--mfc-green); color: var(--mfc-green); background: white; margin: 5px; border-radius: 20px; padding: 8px 20px; transition: 0.3s; }
+        .filter-btn:hover, .filter-btn.active { background-color: var(--mfc-green); color: white; }
+        .car-card { border: none; box-shadow: 0 4px 10px rgba(0,0,0,0.1); transition: 0.3s; }
+        .car-card:hover { transform: translateY(-5px); }
+        .price-tag { color: var(--mfc-green); font-size: 1.3rem; font-weight: bold; }
+        .brand-badge { position: absolute; top: 10px; right: 10px; background: var(--gold); color: black; padding: 5px 10px; font-weight: bold; border-radius: 4px; z-index: 10; }
+        
+        /* WhatsApp Floating Button */
+        .whatsapp-btn { position: fixed; bottom: 90px; right: 20px; background-color: #25D366; color: white; padding: 12px 25px; border-radius: 50px; font-weight: bold; box-shadow: 0 4px 10px rgba(0,0,0,0.3); text-decoration: none; z-index: 1000; display: flex; align-items: center; gap: 10px; }
+        .whatsapp-btn:hover { background-color: #1da851; color: white; }
+    </style>
+</head>
+<body>
+
+    <!-- Alert -->
+    <div class="strict-banner">⚠️ PAGE 2: ADDITIONAL INVENTORY</div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">MFC <span>Auction House</span></a>
+            <div class="ms-auto">
+                <a href="catalogue.html" class="btn btn-outline-dark btn-sm me-2">← Page 1</a>
+                <a href="index.html" class="btn btn-success btn-sm">Home</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <div class="bg-dark text-white text-center py-5" style="background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1503376763036-066120622c74?auto=format&fit=crop&q=80'); background-size: cover;">
+        <h1 class="fw-bold">Inventory Catalogue (Page 2)</h1>
+        <p>Nissan, Hyundai, Renault, Haval & More</p>
+    </div>
+
+    <!-- TEAM SECTION (Random Transition Grid) -->
+    <div class="container my-5">
+        <h3 class="text-center fw-bold text-success mb-4">Have you met our team?</h3>
+        <div class="row justify-content-center g-2">
+            <!-- SLOT 1 -->
+            <div class="col-4 col-md-3">
+                <div id="cat2Team1" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="2500">
+                    <div class="carousel-inner rounded shadow-sm">
+                        <div class="carousel-item active"><img src="teamimages/team.jpg" class="d-block w-100" style="height: 150px; object-fit: cover; border-bottom: 3px solid #C69214;"></div>
+                        <div class="carousel-item"><img src="teamimages/imagepagecatalogue.jpeg" class="d-block w-100" style="height: 150px; object-fit: cover; border-bottom: 3px solid #C69214;"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- SLOT 2 -->
+            <div class="col-4 col-md-3">
+                <div id="cat2Team2" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="4100">
+                    <div class="carousel-inner rounded shadow-sm">
+                        <div class="carousel-item active"><img src="teamimages/team3.jpg" class="d-block w-100" style="height: 150px; object-fit: cover; border-bottom: 3px solid #C69214;"></div>
+                        <div class="carousel-item"><img src="teamimages/finance.jpg" class="d-block w-100" style="height: 150px; object-fit: cover; border-bottom: 3px solid #C69214;"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- SLOT 3 -->
+            <div class="col-4 col-md-3">
+                <div id="cat2Team3" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5800">
+                    <div class="carousel-inner rounded shadow-sm">
+                        <div class="carousel-item active"><img src="teamimages/team2.jpg" class="d-block w-100" style="height: 150px; object-fit: cover; border-bottom: 3px solid #C69214;"></div>
+                        <div class="carousel-item"><img src="teamimages/team1.jpg" class="d-block w-100" style="height: 150px; object-fit: cover; border-bottom: 3px solid #C69214;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Filter Buttons (Updated for new cars)-->
+    <div class="container my-4 text-center">
+        <button class="btn filter-btn active" onclick="filterSelection('all')">Volkswagen</button>
+        <button class="btn filter-btn" onclick="filterSelection('nissan')">Nissan</button>
+        <button class="btn filter-btn" onclick="filterSelection('hyundai')">Hyundai</button>
+        <button class="btn filter-btn" onclick="filterSelection('renault')">Renault</button>
+        <button class="btn filter-btn" onclick="filterSelection('haval')">Haval</button>
+    </div> 
+
+    <!-- Vehicle Grid -->
+    <div class="container mb-5">
+        <div class="row g-4">
+            
+            <!-- Car 1: Nissan NP200 -->
+            <div class="col-md-4 filterDiv vw">
+                <div class="card car-card h-100">
+                    <span class="brand-badge">Volkswagen</span>
+                    <img src="teamimages/polo8.jpg"class="card-img-top" height="200" style="object-fit: cover;">
+                    <div class="card-body">
+                        <h5>Polo GTI 2024 </h5>
+                        <p class="price-tag">R 259,000</p>
+                        <p class="text-muted small">2024 • Manual • Petrol • 45,000km</p>
+                        <a href="index.html#contact" class="btn btn-success w-100">Enquire</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Car 2: Hyundai i20 -->
+            <div class="col-md-4 filterDiv hyundai">
+                <div class="card car-card h-100">
+                    <span class="brand-badge">Hyundai</span>
+                    <img src="https://images.unsplash.com/photo-1621255554308-542617935494?auto=format&fit=crop&q=80" class="card-img-top" height="200" style="object-fit: cover;">
+                    <div class="card-body">
+                        <h5>Hyundai i20 Motion</h5>
+                        <p class="price-tag">R 195,000</p>
+                        <p class="text-muted small">2023 • Manual • Petrol • 22,000km</p>
+                        <a href="index.html#contact" class="btn btn-success w-100">Enquire</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Car 3: Renault Kwid -->
+            <div class="col-md-4 filterDiv renault">
+                <div class="card car-card h-100">
+                    <span class="brand-badge">Renault</span>
+                    <img src="https://images.unsplash.com/photo-1619767886558-efdc259cde1a?auto=format&fit=crop&q=80" class="card-img-top" height="200" style="object-fit: cover;">
+                    <div class="card-body">
+                        <h5>Renault Kwid Climber</h5>
+                        <p class="price-tag">R 115,000</p>
+                        <p class="text-muted small">2023 • Auto • Petrol • 18,000km</p>
+                        <a href="index.html#contact" class="btn btn-success w-100">Enquire</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Car 4: Haval Jolion -->
+            <div class="col-md-4 filterDiv haval">
+                <div class="card car-card h-100">
+                    <span class="brand-badge">Haval</span>
+                    <img src="https://images.unsplash.com/photo-1633513364273-51834a36f4d2?auto=format&fit=crop&q=80" class="card-img-top" height="200" style="object-fit: cover;">
+                    <div class="card-body">
+                        <h5>Haval Jolion Luxury</h5>
+                        <p class="price-tag">R 340,000</p>
+                        <p class="text-muted small">2023 • Auto • Petrol • 12,000km</p>
+                        <a href="index.html#contact" class="btn btn-success w-100">Enquire</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Car 5: Hyundai Tucson -->
+            <div class="col-md-4 filterDiv hyundai">
+                <div class="card car-card h-100">
+                    <span class="brand-badge">Hyundai</span>
+                    <img src="https://images.unsplash.com/photo-1627453004386-2c97495b503e?auto=format&fit=crop&q=80" class="card-img-top" height="200" style="object-fit: cover;">
+                    <div class="card-body">
+                        <h5>Hyundai Tucson 2.0</h5>
+                        <p class="price-tag">R 420,000</p>
+                        <p class="text-muted small">2021 • Auto • Diesel • 55,000km</p>
+                        <a href="index.html#contact" class="btn btn-success w-100">Enquire</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Pagination -->
+    <div class="container text-center mb-5">
+        <a href="catalogue.html" class="btn btn-outline-dark btn-lg me-2">← Previous Page</a>
+        <button class="btn btn-success btn-lg disabled">Page 2</button>
+    </div>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/27603354560?text=Hello,%20I%20am%20interested%20in%20a%20car%20on%20Page%202." class="whatsapp-btn" target="_blank">
+        <i class="fab fa-whatsapp"></i> WhatsApp Us
+    </a>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        filterSelection("all")
+        function filterSelection(c) {
+            var x, i;
+            x = document.getElementsByClassName("filterDiv");
+            if (c == "all") c = "";
+            for (i = 0; i < x.length; i++) {
+                w3RemoveClass(x[i], "d-block");
+                w3RemoveClass(x[i], "d-none");
+                if (x[i].className.indexOf(c) > -1) { w3AddClass(x[i], "d-block"); } 
+                else { w3AddClass(x[i], "d-none"); }
+            }
+            var btns = document.getElementsByClassName("filter-btn");
+            for (var k = 0; k < btns.length; k++) {
+                btns[k].classList.remove("active");
+                if(btns[k].textContent.toLowerCase().includes(c) || (c==="" && btns[k].textContent === "Show All")) { btns[k].classList.add("active"); }
+            }
+        }
+        function w3AddClass(element, name) { var arr1 = element.className.split(" "); var arr2 = name.split(" "); for (var i = 0; i < arr2.length; i++) { if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];} } }
+        function w3RemoveClass(element, name) { var arr1 = element.className.split(" "); var arr2 = name.split(" "); for (var i = 0; i < arr2.length; i++) { while (arr1.indexOf(arr2[i]) > -1) { arr1.splice(arr1.indexOf(arr2[i]), 1); } } element.className = arr1.join(" "); }
+    </script>
+</body>
+</html>
